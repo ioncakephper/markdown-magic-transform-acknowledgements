@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.0.2...v1.1.0) (2025-10-22)
+
+
+### Features
+
+* **acknowledgements:** add dependency evaluation and highlighting options ([95cab04](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/95cab04f4a9d571c865f503ca7492f5be3f33245))
+
 ## [1.0.2](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.0.1...v1.0.2) (2025-10-22)
 
 ### Bug Fixes
