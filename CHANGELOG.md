@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.0.1...v1.0.2) (2025-10-22)
+
+
+### Bug Fixes
+
+* **package.json:** remove redundant module configuration ([12f8f29](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/12f8f299f5c1f203cb9371990d522288ac040358))
+
 ## [1.0.1](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.0.0...v1.0.1) (2025-10-22)
 
 ### Bug Fixes
