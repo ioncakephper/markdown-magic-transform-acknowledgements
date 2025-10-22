@@ -3,12 +3,6 @@
   "version": "1.0.1",
   "description": "A markdown-magic transform that auto-generates an Acknowledgements section for contributors, dependencies, and custom entries.",
   "main": "index.js",
-  "exports": {
-    ".": {
-      "require": "./index.js"
-    }
-  },
-  "type": "commonjs",
   "scripts": {
     "test": "jest --passWithNoTests",
     "fix": "npm run lint:fix && npm run format && npm run format:package",
