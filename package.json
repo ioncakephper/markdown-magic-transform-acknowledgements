@@ -1,8 +1,14 @@
 {
   "name": "markdown-magic-transform-acknowledgements",
   "version": "1.0.0",
-  "description": "",
+  "description": "A markdown-magic transform that auto-generates an Acknowledgements section for contributors, dependencies, and custom entries.",
   "main": "index.js",
+  "exports": {
+    ".": {
+      "require": "./index.js"
+    }
+  },
+  "type": "commonjs",
   "scripts": {
     "test": "jest --passWithNoTests",
     "fix": "npm run lint:fix && npm run format && npm run format:package",
@@ -11,7 +17,8 @@
     "lint": "eslint . --ext .js,.json,.yaml,.yml,.md",
     "lint:fix": "eslint . --ext .js,.json,.yaml,.yml,.md --fix",
     "docs": "npx markdown-magic README.md --config ./markdown-magic.config.js",
-    "prep": "npm run docs && npm run fix"
+    "prep": "npm run docs && npm run fix",
+    "prepublishOnly": "npm run prep && npm test"
   },
   "scriptsMeta": {
     "docs": {
@@ -45,11 +52,19 @@
     "test": {
       "description": "Run the test suite using Jest.",
       "category": "verification"
+    },
+    "prepublishOnly": {
+      "description": "Run preparation and tests before publishing the package.",
+      "category": "prepublish"
     }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ioncakephper/markdown-magic-transform-acknowledgements.git"
+  },
+  "homepage": "https://github.com/ioncakephper/markdown-magic-transform-acknowledgements#readme",
+  "bugs": {
+    "url": "https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/issues"
   },
   "files": [
     "index.js",
@@ -59,11 +74,15 @@
     "RULES_OF_CONDUCT.md"
   ],
   "keywords": [
-    "transform",
+    "markdown",
     "markdown-magic",
+    "transform",
     "automation",
-    "README",
-    "acknowledgements"
+    "acknowledgements",
+    "contributors",
+    "dependencies",
+    "docs",
+    "ci"
   ],
   "author": "Ion Gireada",
   "devDependencies": {
@@ -85,6 +104,9 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=16"
   },
   "license": "MIT"
 }
