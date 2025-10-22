@@ -84,13 +84,15 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 ```
 └── markdown-magic-transform-acknowledgements/
     ├── .prettierrc.json
+    ├── CONTRIBUTING.md
     ├── eslint.config.mjs
     ├── index.js
     ├── LICENSE
     ├── markdown-magic.config.js
     ├── package-lock.json
     ├── package.json
-    └── README.md
+    ├── README.md
+    └── RULES_OF_CONDUCT.md
 ```
 
 <!-- end-doc-gen -->
