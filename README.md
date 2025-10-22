@@ -21,12 +21,9 @@ npm install --save-dev markdown-magic-transform-acknowledgements
 module.exports = {
   transformDefaults: {
     ACKNOWLEDGEMENTS: {
-      sources: [
-        { type: 'contributors', from: 'git' },
-        { type: 'dependencies', from: 'package.json' },
-      ],
-      heading: 'Acknowledgements',
-      format: 'list',
+      evaluateUsed: true,
+      includeDev: true,
+      highlightImportant: true,
     },
   },
   transforms: {
@@ -88,16 +85,16 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 
 ## Acknowledgements
 
-<!-- doc-gen ACKNOWLEDGEMENTS -->
+<!-- doc-gen ACKNOWLEDGEMENTS highlightImportant=true evaluateUsed=true includeDev=true -->
 
 - [@eslint/js](https://www.npmjs.com/package/%40eslint%2Fjs) — ESLint JavaScript language implementation
 - [@eslint/markdown](https://www.npmjs.com/package/%40eslint%2Fmarkdown) — The official ESLint language plugin for Markdown
 - [cross-spawn](https://www.npmjs.com/package/cross-spawn) — Cross platform child_process#spawn and child_process#spawnSync
-- [eslint](https://www.npmjs.com/package/eslint) — An AST-based pattern checker for JavaScript.
+- 🌟 **[eslint](https://www.npmjs.com/package/eslint)** — **An AST-based pattern checker for JavaScript.**
 - [eslint-plugin-json](https://www.npmjs.com/package/eslint-plugin-json) — eslint plugin for JSON files
 - [eslint-plugin-yaml](https://www.npmjs.com/package/eslint-plugin-yaml) — Lint YAML files
 - [fs](https://www.npmjs.com/package/fs) — No description available
-- [jest](https://www.npmjs.com/package/jest) — Delightful JavaScript Testing.
+- 🌟 **[jest](https://www.npmjs.com/package/jest)** — **Delightful JavaScript Testing.**
 - [jsonc-eslint-parser](https://www.npmjs.com/package/jsonc-eslint-parser) — JSON, JSONC and JSON5 parser for use with ESLint plugins
 - [markdown-eslint-parser](https://www.npmjs.com/package/markdown-eslint-parser) — The ESLint custom parser for \*.md files.
 - [markdown-magic](https://www.npmjs.com/package/markdown-magic) — Automatically update markdown files with content from external sources
@@ -152,12 +149,6 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 
   ```bash
   npm run docs && npm run fix
-  ```
-
-- `prepublishOnly` — Run preparation and tests before publishing the package. (line [15](./package.json#L15))
-
-  ```bash
-  npm run prep && npm test
   ```
 
 - `test` — Run the test suite using Jest. (line [7](./package.json#L7))
