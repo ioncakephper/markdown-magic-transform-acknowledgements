@@ -6,6 +6,75 @@
 
 <!-- end-doc-gen -->
 
+A markdown-magic transform that automatically inserts an Acknowledgements section into your README, pulling from contributors, dependencies, or custom entries.
+
+## Install
+
+```bash
+npm install --save-dev markdown-magic-transform-acknowledgements
+```
+
+## Usage
+
+```js
+// markdown.config.js
+module.exports = {
+  transformDefaults: {
+    ACKNOWLEDGEMENTS: {
+      sources: [
+        { type: 'contributors', from: 'git' },
+        { type: 'dependencies', from: 'package.json' },
+      ],
+      heading: 'Acknowledgements',
+      format: 'list',
+    },
+  },
+  transforms: {
+    ACKNOWLEDGEMENTS: require('markdown-magic-transform-acknowledgements'),
+  },
+};
+```
+
+In your README.md
+
+```markdown
+<!-- ACKNOWLEDGEMENTS -->
+<!-- END_ACKNOWLEDGEMENTS -->
+```
+
+## Example
+
+README.md before:
+
+```markdown
+<!-- ACKNOWLEDGEMENTS -->
+<!-- END_ACKNOWLEDGEMENTS -->
+```
+
+README.md after:
+
+```markdown
+<!-- ACKNOWLEDGEMENTS -->
+
+- [@eslint/js](https://www.npmjs.com/package/%40eslint%2Fjs) — ESLint JavaScript language implementation
+- [@eslint/markdown](https://www.npmjs.com/package/%40eslint%2Fmarkdown) — The official ESLint language plugin for Markdown
+- [cross-spawn](https://www.npmjs.com/package/cross-spawn) — Cross platform child_process#spawn and child_process#spawnSync
+- [eslint](https://www.npmjs.com/package/eslint) — An AST-based pattern checker for JavaScript.
+- [eslint-plugin-json](https://www.npmjs.com/package/eslint-plugin-json) — eslint plugin for JSON files
+- [eslint-plugin-yaml](https://www.npmjs.com/package/eslint-plugin-yaml) — Lint YAML files
+- [fs](https://www.npmjs.com/package/fs) — No description available
+- [jest](https://www.npmjs.com/package/jest) — Delightful JavaScript Testing.
+- [jsonc-eslint-parser](https://www.npmjs.com/package/jsonc-eslint-parser) — JSON, JSONC and JSON5 parser for use with ESLint plugins
+- [markdown-eslint-parser](https://www.npmjs.com/package/markdown-eslint-parser) — The ESLint custom parser for \*.md files.
+- [markdown-magic](https://www.npmjs.com/package/markdown-magic) — Automatically update markdown files with content from external sources
+- [markdown-magic-scripts](https://www.npmjs.com/package/markdown-magic-scripts) — Automatically generate a dynamic, customizable dashboard of your npm scripts in your README.md using this markdown-magic transform. Keep your project documentation in sync with your package.json.
+- [markdown-magic-transform-badges](https://www.npmjs.com/package/markdown-magic-transform-badges) — No description available
+- [path](https://www.npmjs.com/package/path) — Node.JS path module
+- [prettier](https://www.npmjs.com/package/prettier) — Prettier is an opinionated code formatter
+- [yaml-eslint-parser](https://www.npmjs.com/package/yaml-eslint-parser) — A YAML parser that produces output compatible with ESLint
+  <!-- END_ACKNOWLEDGEMENTS -->
+```
+
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for details on how to raise issues, propose changes, and submit pull requests. In short:
@@ -43,49 +112,55 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 
 <!-- doc-gen SCRIPTS format=list -->
 
-- `docs` — Generate documentation by processing README.md with markdown-magic. (line [13](./package.json#L13))
+- `docs` — Generate documentation by processing README.md with markdown-magic. (line [19](./package.json#L19))
 
   ```bash
   npx markdown-magic README.md --config ./markdown-magic.config.js
   ```
 
-- `fix` — Automatically fix linting issues and format codebase. (line [8](./package.json#L8))
+- `fix` — Automatically fix linting issues and format codebase. (line [14](./package.json#L14))
 
   ```bash
   npm run lint:fix && npm run format && npm run format:package
   ```
 
-- `format` — Format all project files using Prettier. (line [9](./package.json#L9))
+- `format` — Format all project files using Prettier. (line [15](./package.json#L15))
 
   ```bash
   prettier --write .
   ```
 
-- `format:package` — Format the package.json file using Prettier. (line [10](./package.json#L10))
+- `format:package` — Format the package.json file using Prettier. (line [16](./package.json#L16))
 
   ```bash
   prettier --write package.json
   ```
 
-- `lint` — Lint all project files to ensure code quality and consistency. (line [11](./package.json#L11))
+- `lint` — Lint all project files to ensure code quality and consistency. (line [17](./package.json#L17))
 
   ```bash
   eslint . --ext .js,.json,.yaml,.yml,.md
   ```
 
-- `lint:fix` — Lint all project files and automatically fix issues where possible. (line [12](./package.json#L12))
+- `lint:fix` — Lint all project files and automatically fix issues where possible. (line [18](./package.json#L18))
 
   ```bash
   eslint . --ext .js,.json,.yaml,.yml,.md --fix
   ```
 
-- `prep` — Prepare the project for publishing by generating docs and formatting code. (line [14](./package.json#L14))
+- `prep` — Prepare the project for publishing by generating docs and formatting code. (line [20](./package.json#L20))
 
   ```bash
   npm run docs && npm run fix
   ```
 
-- `test` — Run the test suite using Jest. (line [7](./package.json#L7))
+- `prepublishOnly` — Run preparation and tests before publishing the package. (line [21](./package.json#L21))
+
+  ```bash
+  npm run prep && npm test
+  ```
+
+- `test` — Run the test suite using Jest. (line [13](./package.json#L13))
 
   ```bash
   jest --passWithNoTests
@@ -100,6 +175,7 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 ```
 └── markdown-magic-transform-acknowledgements/
     ├── .prettierrc.json
+    ├── CHANGELOG.md
     ├── CONTRIBUTING.md
     ├── eslint.config.mjs
     ├── index.js
