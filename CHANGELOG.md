@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.1.0...v1.1.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* **readme:** Apply 'for-the-badge' style to all badges ([b0b71b8](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/b0b71b8396eef40786c141d704f82224e362113a))
+
 ## [1.1.0](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.0.2...v1.1.0) (2025-10-22)
 
 ### Features
