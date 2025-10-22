@@ -112,55 +112,55 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 
 <!-- doc-gen SCRIPTS format=list -->
 
-- `docs` — Generate documentation by processing README.md with markdown-magic. (line [19](./package.json#L19))
+- `docs` — Generate documentation by processing README.md with markdown-magic. (line [13](./package.json#L13))
 
   ```bash
   npx markdown-magic README.md --config ./markdown-magic.config.js
   ```
 
-- `fix` — Automatically fix linting issues and format codebase. (line [14](./package.json#L14))
+- `fix` — Automatically fix linting issues and format codebase. (line [8](./package.json#L8))
 
   ```bash
   npm run lint:fix && npm run format && npm run format:package
   ```
 
-- `format` — Format all project files using Prettier. (line [15](./package.json#L15))
+- `format` — Format all project files using Prettier. (line [9](./package.json#L9))
 
   ```bash
   prettier --write .
   ```
 
-- `format:package` — Format the package.json file using Prettier. (line [16](./package.json#L16))
+- `format:package` — Format the package.json file using Prettier. (line [10](./package.json#L10))
 
   ```bash
   prettier --write package.json
   ```
 
-- `lint` — Lint all project files to ensure code quality and consistency. (line [17](./package.json#L17))
+- `lint` — Lint all project files to ensure code quality and consistency. (line [11](./package.json#L11))
 
   ```bash
   eslint . --ext .js,.json,.yaml,.yml,.md
   ```
 
-- `lint:fix` — Lint all project files and automatically fix issues where possible. (line [18](./package.json#L18))
+- `lint:fix` — Lint all project files and automatically fix issues where possible. (line [12](./package.json#L12))
 
   ```bash
   eslint . --ext .js,.json,.yaml,.yml,.md --fix
   ```
 
-- `prep` — Prepare the project for publishing by generating docs and formatting code. (line [20](./package.json#L20))
+- `prep` — Prepare the project for publishing by generating docs and formatting code. (line [14](./package.json#L14))
 
   ```bash
   npm run docs && npm run fix
   ```
 
-- `prepublishOnly` — Run preparation and tests before publishing the package. (line [21](./package.json#L21))
+- `prepublishOnly` — Run preparation and tests before publishing the package. (line [15](./package.json#L15))
 
   ```bash
   npm run prep && npm test
   ```
 
-- `test` — Run the test suite using Jest. (line [13](./package.json#L13))
+- `test` — Run the test suite using Jest. (line [7](./package.json#L7))
 
   ```bash
   jest --passWithNoTests

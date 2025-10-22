@@ -11,8 +11,7 @@
     "lint": "eslint . --ext .js,.json,.yaml,.yml,.md",
     "lint:fix": "eslint . --ext .js,.json,.yaml,.yml,.md --fix",
     "docs": "npx markdown-magic README.md --config ./markdown-magic.config.js",
-    "prep": "npm run docs && npm run fix",
-    "prepublishOnly": "npm run prep && npm test"
+    "prep": "npm run docs && npm run fix"
   },
   "scriptsMeta": {
     "docs": {
@@ -46,10 +45,6 @@
     "test": {
       "description": "Run the test suite using Jest.",
       "category": "verification"
-    },
-    "prepublishOnly": {
-      "description": "Run preparation and tests before publishing the package.",
-      "category": "prepublish"
     }
   },
   "repository": {
