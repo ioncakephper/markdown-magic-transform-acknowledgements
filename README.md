@@ -172,9 +172,9 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 
 ## Project Structure
 
-<!-- doc-gen treeFileExtended -->
+<!-- doc-gen treeFileExtended root="(root)" -->
 ```
-markdown-magic-transform-acknowledgements/
+(root)
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── eslint.config.mjs
