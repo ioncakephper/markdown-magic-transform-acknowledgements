@@ -172,7 +172,7 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 
 ## Project Structure
 
-<!-- doc-gen treeFileExtended root="(root)" -->
+<!-- doc-gen treeFileExtended root="(root)" showDescriptions=true -->
 ```
 (root)
 ├── CHANGELOG.md
