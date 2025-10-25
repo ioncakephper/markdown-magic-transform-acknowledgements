@@ -1,9 +1,7 @@
 # markdown-magic-transform-acknowledgements
 
 <!-- doc-gen BADGES style=for-the-badge -->
-
 [![npm version](https://img.shields.io/npm/v/markdown-magic-transform-acknowledgements.svg?style=for-the-badge)](https://www.npmjs.com/package/markdown-magic-transform-acknowledgements) [![npm downloads](https://img.shields.io/npm/dw/markdown-magic-transform-acknowledgements.svg?style=for-the-badge)](https://www.npmjs.com/package/markdown-magic-transform-acknowledgements) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/markdown-magic-transform-acknowledgements) [![actions status](https://img.shields.io/github/actions/workflow/status/ioncakephper/markdown-magic-transform-acknowledgements/ci.yml?branch=main&style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/actions) [![codecov](https://img.shields.io/codecov/c/github/ioncakephper/markdown-magic-transform-acknowledgements?branch=main&style=for-the-badge)](https://codecov.io/gh/ioncakephper/markdown-magic-transform-acknowledgements) [![release](https://img.shields.io/github/v/release/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/releases) [![maintained](https://img.shields.io/github/commit-activity/y/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/graphs/commit-activity) [![stars](https://img.shields.io/github/stars/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/stargazers) [![forks](https://img.shields.io/github/forks/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/network/members) [![watchers](https://img.shields.io/github/watchers/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/watchers) [![last commit](https://img.shields.io/github/last-commit/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commits) [![contributors](https://img.shields.io/github/contributors/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/graphs/contributors) [![issues](https://img.shields.io/github/issues/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/issues) [![pull requests](https://img.shields.io/github/issues-pr/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/pulls) [![repo size](https://img.shields.io/github/repo-size/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements) [![top language](https://img.shields.io/github/languages/top/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements) [![languages](https://img.shields.io/github/languages/count/ioncakephper/markdown-magic-transform-acknowledgements?style=for-the-badge)](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/search?l=)
-
 <!-- end-doc-gen -->
 
 A markdown-magic transform that automatically inserts an Acknowledgements section into your README, pulling from contributors, dependencies, or custom entries.
@@ -72,6 +70,21 @@ README.md after:
   <!-- END_ACKNOWLEDGEMENTS -->
 ```
 
+## Options
+
+1. **In the HTML comment:**
+   Options can be added as `key=value` or `"key"="value"` pairs
+
+2. **In `markdown-magic.config.js`:** You can provide default values for the
+   transform in the `transformDefaults` section of your `markdown-magic.config.js`
+   file. These defaults will be used unless overridden in the HTML comment.
+
+| Option | Type | Default | Description |
+| ------ | ---- | ------- | ----------- |
+| `evaluatedUsed` | `boolean` | `false` | Scan repo files and include only used packages |
+| `highlightImportant` | `boolean` | `false` | Mark important packages automatically (heuristic) |
+| `includeDev` | `boolean` | `true` | Include devDependencies (can be overridden) |
+
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for details on how to raise issues, propose changes, and submit pull requests. In short:
@@ -86,7 +99,6 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 ## Acknowledgements
 
 <!-- doc-gen ACKNOWLEDGEMENTS highlightImportant=true evaluateUsed=true includeDev=true -->
-
 - [@eslint/js](https://www.npmjs.com/package/%40eslint%2Fjs) — ESLint JavaScript language implementation
 - [@eslint/markdown](https://www.npmjs.com/package/%40eslint%2Fmarkdown) — The official ESLint language plugin for Markdown
 - [cross-spawn](https://www.npmjs.com/package/cross-spawn) — Cross platform child_process#spawn and child_process#spawnSync
@@ -96,10 +108,11 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 - [fs](https://www.npmjs.com/package/fs) — No description available
 - 🌟 **[jest](https://www.npmjs.com/package/jest)** — **Delightful JavaScript Testing.**
 - [jsonc-eslint-parser](https://www.npmjs.com/package/jsonc-eslint-parser) — JSON, JSONC and JSON5 parser for use with ESLint plugins
-- [markdown-eslint-parser](https://www.npmjs.com/package/markdown-eslint-parser) — The ESLint custom parser for \*.md files.
+- [markdown-eslint-parser](https://www.npmjs.com/package/markdown-eslint-parser) — The ESLint custom parser for *.md files.
 - [markdown-magic](https://www.npmjs.com/package/markdown-magic) — Automatically update markdown files with content from external sources
 - [markdown-magic-scripts](https://www.npmjs.com/package/markdown-magic-scripts) — Automatically generate a dynamic, customizable dashboard of your npm scripts in your README.md using this markdown-magic transform. Keep your project documentation in sync with your package.json.
 - [markdown-magic-transform-badges](https://www.npmjs.com/package/markdown-magic-transform-badges) — No description available
+- [markdown-magic-transform-treefile-extended](https://www.npmjs.com/package/markdown-magic-transform-treefile-extended) — A markdown-magic transform to generate a dynamic file tree in your markdown files. This extended version provides additional options for customizing the output.
 - [path](https://www.npmjs.com/package/path) — Node.JS path module
 - [prettier](https://www.npmjs.com/package/prettier) — Prettier is an opinionated code formatter
 - [yaml-eslint-parser](https://www.npmjs.com/package/yaml-eslint-parser) — A YAML parser that produces output compatible with ESLint
@@ -108,7 +121,6 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
 ## Helper Scripts
 
 <!-- doc-gen SCRIPTS format=list -->
-
 - `docs` — Generate documentation by processing README.md with markdown-magic. (line [13](./package.json#L13))
 
   ```bash
@@ -156,26 +168,22 @@ This project is licensed under the terms of the MIT License. See the [`LICENSE`]
   ```bash
   jest --passWithNoTests
   ```
-
   <!-- end-doc-gen -->
 
 ## Project Structure
 
-<!-- doc-gen fileTree -->
-
+<!-- doc-gen treeFileExtended -->
 ```
-└── markdown-magic-transform-acknowledgements/
-    ├── .prettierrc.json
-    ├── CHANGELOG.md
-    ├── CONTRIBUTING.md
-    ├── eslint.config.mjs
-    ├── index.js
-    ├── LICENSE
-    ├── markdown-magic.config.js
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── RULES_OF_CONDUCT.md
+markdown-magic-transform-acknowledgements/
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── eslint.config.mjs
+├── index.js
+├── LICENSE
+├── markdown-magic.config.js
+├── package-lock.json
+├── package.json
+├── README.md
+└── RULES_OF_CONDUCT.md
 ```
-
 <!-- end-doc-gen -->

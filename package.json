@@ -87,6 +87,7 @@
     "markdown-magic": "^3.7.0",
     "markdown-magic-scripts": "^1.3.0",
     "markdown-magic-transform-badges": "^1.1.4",
+    "markdown-magic-transform-treefile-extended": "^1.0.4",
     "prettier": "^3.6.2",
     "yaml-eslint-parser": "^1.3.0"
   },
