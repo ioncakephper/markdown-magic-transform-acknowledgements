@@ -1,6 +1,15 @@
 const fs = require('fs').promises;
 const path = require('path');
 
+
+// Markdown Magic Transform: Acknowledgments Renderer
+//
+// Options:
+// - evaluatedUsed         (boolean)             Default: false    Scan repo files and include only used packages
+// - highlightImportant    (boolean)             Default: true     Mark important packages automatically (heuristic)
+// - includeDev            (boolean)             Default: false    Include devDependencies (can be overridden)
+
+
 module.exports = async ({ transform, options = {}, settings = {} }) => {
   // Default options
   const defaultOptions = {
