@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.2.1...v1.2.2) (2025-10-25)
+
+
+### Bug Fixes
+
+* **treeFileExtended:** Show file descriptions in project structure ([20fd685](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/20fd68517008f00bb477fc4b47dbcd1cca9b2972))
+
 ## [1.2.1](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.2.0...v1.2.1) (2025-10-25)
 
 
