@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.1](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.2.0...v1.2.1) (2025-10-25)
+
+
+### Bug Fixes
+
+* **readme:** add comprehensive project documentation ([6b3a0ff](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/6b3a0ff332b700b03b456d0b636147ac4d6e8c4a))
+* **readme:** reduce content to show project file tree with descriptions ([86dbcd5](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/86dbcd5f728c03a49cb38c495ce4fbe601fa8e6a))
+* **readme:** reduce content to show project file tree with descriptions ([403eea7](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/403eea73e617cae9c23a972c90273454d18f7366))
+
 ## [1.2.0](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.1.1...v1.2.0) (2025-10-25)
 
 
