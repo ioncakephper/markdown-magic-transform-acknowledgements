@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.1.1...v1.2.0) (2025-10-25)
+
+
+### Features
+
+* **docs:** integrate extended file tree and document transform options ([9039e90](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/9039e9082caa9ba7022c278fb9aaed0f5904155f))
+* **docs:** integrate extended file tree and document transform options ([5de3c8c](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/commit/5de3c8c4fb189003f09d6019277de4e9b6897fa5))
+
 ## [1.1.1](https://github.com/ioncakephper/markdown-magic-transform-acknowledgements/compare/v1.1.0...v1.1.1) (2025-10-22)
 
 
